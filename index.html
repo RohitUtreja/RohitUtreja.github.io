@@ -6,11 +6,78 @@
     <body>
         <canvas id="snakegame" width="400" height="400"></canvas>
         <div id="score">0</div>
-        <button onclick="restart_game()">Restart</button>
+        <button class="restart" onclick="restart_game()">Restart</button>
+        <div class="snakenavigation">
+            <span onClick="changeArrowDirection('UP')" class="up-icon"> </span>
+            <span onClick="changeArrowDirection('DOWN')" class="down-icon"> </span>
+            <span onClick="changeArrowDirection('LEFT')" class="left-icon"> </span>
+            <span onClick="changeArrowDirection('RIGHT')" class="right-icon"> </span>
+        </div>
         <style>
             #snakegame {
                 position: absolute;
                 top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .restart {
+                background-color: 'red';
+
+            }
+            .up-icon {
+                position: relative;
+                width : 40px;
+                background: url("arrow-icon.svg");
+                height: 40px;
+                display: block;
+                transform: rotate(180deg);
+                margin-top: -40px;
+            }
+
+            .down-icon {
+                position: relative;
+                width : 40px;
+                background: url("arrow-icon.svg");
+                height: 40px;
+                display: block;
+                left: 2px;
+                top: 50px;
+            }
+
+            .left-icon {
+                position: relative;
+                width : 40px;
+                background: url("arrow-icon.svg");
+                height: 40px;
+                display: block;
+                transform: rotate(90deg);
+                left: -44px;
+                top: -35px;
+            }
+
+            .right-icon {
+                position: relative;
+                width : 40px;
+                background: url("arrow-icon.svg");
+                height: 40px;
+                display: block;
+                transform: rotate(270deg);
+                left: 49px;
+                top: -75px;
+
+            }
+
+
+            .snakenavigation{
+                background-color: lightgrey;
+                width: 50px;
+                height: 50px;
+                border: 5px solid black;
+                padding: 50px;
+                margin: 20px;
+                position: absolute;
+                top: 90%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
