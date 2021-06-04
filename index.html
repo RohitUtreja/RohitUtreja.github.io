@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>Page hosted with GitHub Pages.121</p>
-</body>
+    <head>
+        <title>Snake Game JS</title>
+    </head>
+    <body>
+        <canvas id="snakegame" width="400" height="400"></canvas>
+        <div id="score">0</div>
+        <button onclick="restart_game()">Restart</button>
+        <style>
+            #snakegame {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </body>
+
+    <script src=snake.js></script>
 </html>
