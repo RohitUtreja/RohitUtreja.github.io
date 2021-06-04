@@ -96,16 +96,23 @@ function move_snake(){
 //{x: snake[0].x+dx, y: snake[0].y}+dy;
 
 function changeArrowDirection(parameter){
-    if(parameter === 'LEFT'){
+
+    if (changing_direction) return;
+      changing_direction = true;
+    const goUp = dy === -10;
+    const goDown = dy === 10;
+    const goLeft = dx === -10;
+    const goRight = dx === 10;
+    if(parameter === 'LEFT'  && !goRight){
         dx = -10;
         dy = 0;
-    } else if(parameter === 'UP'){
+    } else if(parameter === 'UP' && !goDown){
         dx = 0;
         dy = -10;
-    } else if(parameter === 'RIGHT'){
+    } else if(parameter === 'RIGHT' && !goLeft){
         dx = 10;
         dy = 0;
-    }else if(parameter === 'DOWN'){
+    }else if(parameter === 'DOWN' && !goUp){
         dx = 0;
         dy = 10;
     }
