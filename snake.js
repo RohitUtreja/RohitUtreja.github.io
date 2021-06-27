@@ -30,7 +30,7 @@ document.addEventListener("keydown", change_direction);
 function main(){
 
     if(game_over()){
-        alert("GAME OVER");
+        alert("GAME OVER!!!   Your Score: "+score);
         return;
     }
     changing_direction = false;
@@ -85,7 +85,7 @@ function move_snake(){
     const has_eaten_food = snake[0].x === food_x && snake[0].y === food_y;
     if(has_eaten_food){
         score = score+10;
-        document.getElementById('score').innerHTML=score;
+        document.getElementById('score').innerHTML="Your Score:"+score;
         gen_food();
     }else{
         snake.pop();

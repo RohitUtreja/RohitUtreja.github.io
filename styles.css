@@ -1,0 +1,121 @@
+  body {
+    margin: 0;
+    background-color: #90afc5;
+  }
+  header {
+    background: #90afc5;
+    color: white;
+    text-align: center;
+  }
+  h1{
+    margin-top: 0;
+    padding-top: 10px;
+    padding bottom : 5px;
+    margin-bottom: 0;
+  }
+  p{
+    padding-bottom: 5px;
+    margin-top: 0;
+    color: white;
+  }
+  .content-wrap {
+    width: 800px;
+    margin: 0 auto;
+  }
+    #snakegame {
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        border: 5px solid black;
+    }
+
+    #score{
+      color: white;
+      font-weight: bold;
+      margin-top: 1em;
+    }
+    .restart {
+        background-color: 'red';
+
+    }
+    .up-icon {
+        position: relative;
+        width : 40px;
+        background: url("arrow-icon.svg");
+        height: 40px;
+        display: block;
+        transform: rotate(180deg);
+        margin-top: -40px;
+    }
+
+    .down-icon {
+        position: relative;
+        width : 40px;
+        background: url("arrow-icon.svg");
+        height: 40px;
+        display: block;
+        left: 2px;
+        top: 50px;
+    }
+
+    .left-icon {
+        position: relative;
+        width : 40px;
+        background: url("arrow-icon.svg");
+        height: 40px;
+        display: block;
+        transform: rotate(90deg);
+        left: -44px;
+        top: -35px;
+    }
+
+    .right-icon {
+        position: relative;
+        width : 40px;
+        background: url("arrow-icon.svg");
+        height: 40px;
+        display: block;
+        transform: rotate(270deg);
+        left: 49px;
+        top: -75px;
+
+    }
+
+
+    .snakenavigation{
+        background-color: lightgrey;
+        width: 50px;
+        height: 50px;
+        border: 5px solid black;
+        padding: 50px;
+        margin: 20px;
+        position: relative;
+        margin: 0 auto;
+        /* top: 90%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+    }
+
+    .score-restart {
+      display: inline-flex;
+      margin-left: 35%;
+      position: relative;
+    }
+
+    .restart {
+      margin-left: 30px;
+      position: relative;
+      background-color: black;
+      border: none;
+      font-size: 20px;
+      color: #FFFFFF;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 5px;
+    }
